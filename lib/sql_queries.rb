@@ -13,7 +13,7 @@ def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_
     GROUP BY projects.title;"
 end
 
-def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_summed_amount
+def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_summed_amount 
     "SELECT users.name, users.age, SUM(pledges.amount) FROM users
     INNER JOIN pledges
     ON users.id = pledges.user_id
